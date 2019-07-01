@@ -364,8 +364,8 @@ nav .open {
 }
 
 .video__wrapper iframe {
-  width: 95%;
-  height: auto;
+  width: 96%;
+  min-height: 35vh;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -541,6 +541,12 @@ nav .open {
   .card__header {
     margin: 20vh auto -.25em 22vw;
     font-size: 3.75em;
+  }
+  .show__info--wrapper {
+    max-height: 20%;
+  }
+  .show__info {
+    margin: 1vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */
