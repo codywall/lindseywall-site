@@ -1,0 +1,477 @@
+/* ----------------------- */
+/* VARIABLES AND MIXINS */
+/* ----------------------- */
+/* ----------------------- */
+/* SITE-WIDE */
+/* ----------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100vw;
+  font-size: 16px;
+}
+
+.body-wrapper {
+  background-image: url("./img/flowers-bg.png");
+  background-repeat: repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-family: "Bebas Kai", Futura, sans-serif;
+  color: #EEC8D8;
+  font-size: 2em;
+  font-weight: 200;
+  margin: 16px 0;
+  text-align: left;
+}
+
+/* Fix the navbar covering the anchor header */
+:target {
+  display: block;
+  position: relative;
+  padding-top: 100px;
+}
+
+.card__wrapper {
+  background-color: #c199ba;
+  margin: 0 auto;
+  padding-top: 0;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.card__header {
+  margin: 20vh auto -.25em 10vw;
+  font-family: "Bebas Kai", Futura, sans-serif;
+  color: #4B4A4A;
+  font-size: 1.75em;
+  font-weight: 300;
+  border: none;
+  padding: 0;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+/* ----------------------- */
+/* NAVIGATION */
+/* ----------------------- */
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  height: 12vh;
+  list-style-type: none;
+  background-color: #FAF9CC;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  margin: 0;
+  -webkit-box-shadow: 0 1px 6px  gray;
+          box-shadow: 0 1px 6px  gray;
+}
+
+nav .nav__item--logo img {
+  max-width: 40vw;
+  height: auto;
+}
+
+nav .nav__link {
+  font-family: "Bebas Kai", Futura, sans-serif, sans-serif;
+  color: #EEC8D8;
+  margin: 10px;
+  display: inline-block;
+  padding: 1vw 2vw;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+nav .nav__item:first-child {
+  margin-right: auto;
+}
+
+nav #menu-toggle {
+  position: absolute;
+  left: 1.5em;
+  top: 1.5em;
+  cursor: pointer;
+}
+
+nav #menu-toggle .line {
+  width: 30px;
+  height: 3px;
+  margin: 8px 0;
+  background-color: #4B4A4A;
+}
+
+nav #menu-toggle .line--last {
+  width: 20px;
+}
+
+nav .mobile-nav {
+  -webkit-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  background: #4C4469;
+  color: #f7f7f7;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 100vh;
+  left: -100vw;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 60vw;
+  z-index: 99;
+}
+
+nav .nav__list {
+  position: absolute;
+  top: 30%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Kai", Futura, sans-serif;
+}
+
+nav .nav__link {
+  color: #f7f7f7;
+}
+
+nav .active {
+  left: 0;
+}
+
+nav .active::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav .active::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav #close__button--wrapper {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  width: 5vw;
+  height: 5vw;
+}
+
+nav #close__button {
+  font-size: 1.25em;
+  color: #f7f7f7;
+  background: none;
+  border: none;
+}
+
+nav #nav__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vw;
+  width: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  z-index: 1;
+}
+
+nav .closed {
+  display: none;
+}
+
+nav .open {
+  display: block;
+}
+
+/* ----------------------- */
+/* HERO SECTION */
+/* ----------------------- */
+.hero__image {
+  background-image: url("../img/hero-bg.jpg");
+  height: 88vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 12vh;
+}
+
+.hero__image .hero__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  position: absolute;
+  width: 75vw;
+  height: auto;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #4B4A4A;
+  background-color: rgba(250, 249, 204, 0.71);
+  border-radius: 1px;
+  padding: 1vw 5vw 5vw 5vw;
+}
+
+.hero__image .hero__text-wrapper .hero__text--heading {
+  font-family: "Bebas Kai", Futura, sans-serif;
+  font-size: 3em;
+  color: #4B4A4A;
+  font-weight: 200;
+  margin: 5px;
+}
+
+.hero__image .hero__text-wrapper .hero__text--body {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 1.95;
+}
+
+.hero__image .hero__text-wrapper .hero__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-radius: 2px;
+  padding: 0 1em;
+  max-width: 44vw;
+  margin: 1vw;
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: #4B4A4A;
+  background-color: #EEC8D8;
+  outline: none;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  font-family: "Bebas Kai", Futura, sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 36px;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+/* ----------------------- */
+/* BIO PAGE */
+/* ----------------------- */
+.bio__image {
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 4vw 2vw;
+}
+
+.bio__text {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  color: #f7f7f7;
+  font-weight: 200;
+  line-height: 1.55em;
+  padding: 0 6vw 4vw 6vw;
+}
+
+/* ----------------------- */
+/* CONTACT SECTION */
+/* ----------------------- */
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #F7F5F5;
+}
+
+.contact__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.contact__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  max-width: 70vw;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.contact__icon {
+  width: auto;
+  height: 9em;
+  padding: 16px;
+}
+
+#phone-number {
+  letter-spacing: 0.05em;
+}
+
+/* ----------------------- */
+/* MEDIA QUERIES */
+/* ----------------------- */
+@media all and (max-width: 1000px) {
+  .hero__text-wrapper {
+    width: 85vw;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .hero__image {
+    background-position: top;
+  }
+  .hero__text-wrapper {
+    max-width: 45vw;
+  }
+  nav .nav__item--logo img {
+    max-width: 25vw;
+  }
+  nav .nav__item--logo img .toggle {
+    display: none;
+  }
+  nav .nav__item--logo img .nav__item:first-child {
+    margin: auto;
+    padding: 14px 0;
+  }
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 25vh;
+  }
+  .about__image--cropper {
+    width: 65vw;
+    height: 65vw;
+  }
+  .bio__image {
+    width: 65%;
+    margin: 4vw 2vw 2vw 2vw;
+  }
+  .bio__text {
+    line-height: 2.5em;
+  }
+  .card__wrapper {
+    max-width: 60vw;
+  }
+  .card__header {
+    margin: 20vh auto -.25em 22vw;
+    font-size: 3.75em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
