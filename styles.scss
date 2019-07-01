@@ -63,6 +63,10 @@ h3 {
     text-align: left;
 }
 
+input:focus {
+    outline:none;
+}
+
 /* Fix the navbar covering the anchor header */
 :target {
     @include target-offset();
@@ -250,22 +254,14 @@ nav {
         top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: $primary-color;
-        background-color: rgba(250, 249, 204, .71);
+        color: $white-color;
+        background-color: rgba(0, 0, 0, .51);
         border-radius: 1px;
         padding: 1vw 5vw 5vw 5vw;
 
-        .hero__text--heading {
-            font-family: $primary-font;
-            font-size: 3em;
-            color: $primary-color;
-            font-weight: 200;
-            margin: 5px;;
-        }
-
         .hero__text--body {
             font-family: $body-font;
-            font-weight: bold;
+            font-weight: lighter;
             font-size: 1em;
             font-weight: 100;
             line-height: 1.95; 

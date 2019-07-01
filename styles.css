@@ -45,6 +45,10 @@ h3 {
   text-align: left;
 }
 
+input:focus {
+  outline: none;
+}
+
 /* Fix the navbar covering the anchor header */
 :target {
   display: block;
@@ -262,23 +266,15 @@ nav .open {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #4B4A4A;
-  background-color: rgba(250, 249, 204, 0.71);
+  color: #f7f7f7;
+  background-color: rgba(0, 0, 0, 0.51);
   border-radius: 1px;
   padding: 1vw 5vw 5vw 5vw;
 }
 
-.hero__image .hero__text-wrapper .hero__text--heading {
-  font-family: "Bebas Kai", Futura, sans-serif;
-  font-size: 3em;
-  color: #4B4A4A;
-  font-weight: 200;
-  margin: 5px;
-}
-
 .hero__image .hero__text-wrapper .hero__text--body {
   font-family: "Montserrat", Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 1em;
   font-weight: 100;
   line-height: 1.95;
