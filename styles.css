@@ -108,8 +108,8 @@ nav {
   width: 100vw;
   z-index: 1;
   margin: 0;
-  -webkit-box-shadow: 0 1px 6px  gray;
-          box-shadow: 0 1px 6px  gray;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 nav .nav__item--logo img {
@@ -382,7 +382,32 @@ nav .open {
 }
 
 /* ----------------------- */
-/* CONTACT SECTION */
+/* VIDEOS PAGE */
+/* ----------------------- */
+.show__info--wrapper {
+  padding: 4vw;
+}
+
+.show__info {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  color: #f7f7f7;
+  line-height: .5em;
+  margin: 3vw;
+  padding: 2vw 0;
+}
+
+.show__info--date {
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.show__info--venue {
+  font-size: 1.05em;
+  font-weight: 100;
+}
+
+/* ----------------------- */
+/* CONTACT CARD */
 /* ----------------------- */
 .contact {
   display: -webkit-box;
