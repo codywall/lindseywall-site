@@ -63,8 +63,12 @@ h3 {
     text-align: left;
 }
 
-input:focus {
-    outline:none;
+//hide blue focus outline except for accessible users
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
 }
 
 /* Fix the navbar covering the anchor header */
