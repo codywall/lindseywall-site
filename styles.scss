@@ -70,12 +70,13 @@ h3 {
 
   .card__wrapper {
     background-color: rgb(193, 153, 186);
-    margin: 0 auto;
+    margin: 0 auto 4vh auto;
     padding-top: 0;
-    width: 90vw;
+    width: 95vw;
     @include flex-center();
     flex-direction: column;
     align-self: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .16);
 }
 
 .card__header {
@@ -306,8 +307,6 @@ nav {
 /* ----------------------- */
         /* BIO PAGE */
 /* ----------------------- */
-  
-
 
     .bio__image {
         width: 90%;
@@ -329,8 +328,9 @@ nav {
 
 .video__wrapper {
     position: relative;
-    padding: 6vw 2vw;
-    align-self: center;
+    padding: 3vw 1vw 1vw 1vw;
+    @include flex-center();
+    flex-direction: column;
     width: auto;
     height: auto;
     overflow: auto; 
@@ -339,6 +339,15 @@ nav {
 .video__wrapper iframe {
     width: 95%;
     height: auto;
+    align-self: center;
+}
+
+.video__caption {
+    font-size: 1em;
+    color: $white-color;
+    font-family: $body-font;
+    font-weight: 800;
+    align-self: center;
 }
 
 
