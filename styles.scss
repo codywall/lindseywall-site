@@ -270,6 +270,11 @@ nav {
             font-weight: 100;
             line-height: 1.95; 
         }
+
+        .hero__button--wrapper {
+            @include flex-center();
+            flex-direction: row;
+        }
         
             .hero__button {
                 align-self: center;
