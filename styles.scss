@@ -96,8 +96,6 @@ body:not(.user-is-tabbing) textarea:focus {
     border: none;
     padding: 0;
     align-self: baseline;
-    
-    
 }
 
 /* ----------------------- */
@@ -384,41 +382,21 @@ nav {
     /* CONTACT CARD */
 /* ----------------------- */
 
-.contact {
+.contact-header {
+    margin: 1vh auto -.25em 10vw;
+    font-family: $primary-font;
+    color: $primary-color;
+    font-size: 2.75em;
+    font-weight: 300;
+    border: none;
+    padding: 0;
+    align-self: baseline;
+}
+
+.contact__email {
     @include flex-center();
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    background-color:#F7F5F5
-}
-
-.contact__header {
-    @include flex-center();
-}
-
-.contact__card {
-  
-    @include flex-center();
-    flex-flow: row nowrap;
-    max-width: 70vw;
-    padding:20px;
-    text-align: center;
-}
-
-.contact__cards {
-    @include flex-center();
-    flex-direction: column;
-    align-self: center;
-}
-
-.contact__icon {
-    width: auto;
-    height: 9em;
-    padding: 16px;
-}
-
-#phone-number {
-    letter-spacing: 0.05em;
+    color: $primary-color;
+    font-family: $body-font;
 }
 
 
