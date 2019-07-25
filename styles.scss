@@ -397,6 +397,12 @@ nav {
     @include flex-center();
     color: $primary-color;
     font-family: $body-font;
+    font-size: 1.15em;
+}
+
+.contact__icons--wrapper {
+    @include flex-center();
+    flex-direction: row;
 }
 
 

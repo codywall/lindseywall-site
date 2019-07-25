@@ -446,6 +446,22 @@ nav .open {
       align-content: center;
   color: #4B4A4A;
   font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 1.15em;
+}
+
+.contact__icons--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 /* ----------------------- */
