@@ -9,6 +9,7 @@ $card-color: #C199BA;
 $accent-color:  #FFFAF1;
 $white-color: white;
 $primary-font: 'Montserrat', Futura, sans-serif;
+$secondary-font: 'Bebas Kai', Futura, sans-serif;
 $body-font: 'Montserrat', Helvetica, sans-serif;
 $hero-image: 'img/922DD3A3-E80E-492C-ADF4-FE48F83AA839.png';
  
@@ -130,6 +131,9 @@ body:not(.user-is-tabbing) textarea:focus {
 /* ----------------------- */
     /* NAVIGATION */
 /* ----------------------- */
+.desktop__list {
+    display: none;
+}
 
 nav {
         display: flex;
@@ -144,7 +148,6 @@ nav {
         width: 100vw;
         z-index: 1;
         margin: 0;
-        // box-shadow: 3px 3px 6px rgba(0, 0, 0, .16);
     
     .nav__item--logo img {  
         width: auto;
@@ -241,25 +244,25 @@ nav {
        background: none;
        border: none;
     }
+}
 
-    #nav__modal {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vw;
-        width: 100vh;
-        background-color: rgba(0,0,0,.8);
-        overflow: hidden;
-        z-index: 1;
-    }
+#nav__modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.8);
+    overflow: hidden;
+    z-index: 0;
+}
 
-    .closed {
-        display: none;
-    }
+.closed {
+    display: none;
+}
 
-    .open {
-        display: block;
-    }
+.open {
+    display: block;
 }
 
 /* ----------------------- */
@@ -277,10 +280,11 @@ nav {
     #hero {
         width: 90vw;
         height: auto;
+        padding-top: 0;
     }   
     #hero__announcement {
         font-size: 1.5em;
-        padding: 0 1vw;
+        padding: 0 3vw;
         font-family: $body-font;
     }
 }
@@ -293,7 +297,7 @@ nav {
 
     #spotify {
         width: 90vw;
-        height: 250px;
+        height: 185px;
         margin: 0 auto;
     }
 }
@@ -372,41 +376,20 @@ nav {
 /* ----------------------- */
     /* MEDIA QUERIES */
 /* ----------------------- */
-
-@media all and (max-width: 1000px) {
-    .hero__text-wrapper {
-        width: 85vw;
-    }
-
-  }
-
 @media all and (min-width: 700px) {
+#spotify__wrapper {
 
-    .hero__image {
-        background-position: top;
-        max-width: 800px;
-        align-self: flex-end;
-}
-
-.hero__text-wrapper {
-    max-width: 45vw;
-}
-
-nav .nav__item--logo img {
-    max-width: 25vw;
-
-
-    .toggle {
-        display: none;
-    }
-
-    .nav__item:first-child {
-        margin: auto;
-        padding: 14px 0;
+    #spotify {
+        width: 600px;
     }
 }
 
-#spotify {
+.content__wrapper {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#contact__card {
     width: 600px;
 }
 
@@ -423,43 +406,46 @@ nav .nav__item--logo img {
     }   
 }
 
-.about {
-        @include flex-center();
-        flex-direction: column;
-        margin-top: 25vh;
-    }
-
- .about__image--cropper {
-        width: 65vw;
-        height: 65vw;
-    }
-
-.bio__image {
-        width: 65%;
-        margin: 4vw 2vw 2vw 2vw;
-    }
-
-.bio__text { 
-    line-height: 2.5em;
-}
-    
-.card__wrapper{
-        max-width: 60vw;
-    }
-
-    .card__header {
-        margin: 20vh auto -.25em 22vw;
-        font-size: 3.75em;
+.video {
+    width: 700px;
+    height: 450px;
 }
 
-.show__info--wrapper {
-    max-height: 20%;
+#songkick__wrapper div{
+    width: 800px;
 }
 
-.show__info {
-    margin: 1vw;
+#spotify {
+    width: 800px;
 }
 
+}
 
+@media all and (min-width: 900px) {
+    #menu-toggle {
+        display: none;
+    }
 
+    .desktop__list {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+
+        .desktop__link {
+            list-style-type: none;
+            font-family: $primary-font;
+            font-weight: 100;
+            color: $secondary-color;
+            font-size: 1.3em;
+            padding: 0 1em;
+        }
+
+        .desktop__link:hover {
+            color: darkslategrey;
+        }
+    }
+    .nav__item--logo {
+        justify-self: start;
+        padding-left: 4vw;
+    }
 }

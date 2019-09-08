@@ -19,16 +19,24 @@
 <body>
     <main class="body-wrapper">
 
-        <nav id="nav">
+        <nav>
             <div id="menu-toggle" class="nav__item">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line line--last"></div>
             </div>
 
-            <a href="index.html" class="nav__item nav__item--logo">
+            <a href="#hero__wrapper" class="nav__item nav__item--logo">
                 <img src="../img/lindsey-logo-grey.png" alt="Lindsey Wall Logo">
             </a>
+
+            <ul class="desktop__list">
+                <li class="nav__item"><a href="#hero" class="desktop__link">Home</a></li>
+                <li class="nav__item"><a href="#music" class="desktop__link">Music</a></li>
+                <li class="nav__item"><a href="#tour" class="desktop__link">Tour</a></li>
+                <li class="nav__item"><a href="#videos" class="desktop__link">Videos</a></li>
+                <li class="nav__item"><a href="#contact" class="desktop__link">Contact</a></li>
+            </ul>
 
             <!-- NAVIGATION -->
             <div id="mobile-nav" class="mobile-nav">
@@ -41,12 +49,9 @@
                     <li class="nav__item"><a href="#tour" class="nav__link">TOUR</a></li>
                     <li class="nav__item"><a href="#videos" class="nav__link">VIDEOS</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">CONTACT</a></li>
-
-                    <!-- <li class="nav__item"><a href="bio.html" class="nav__link">BIO</a></li> -->
                 </ul>
             </div>
         </nav>
-        <aside id="nav__modal" class="closed"></aside>
         <!-- END NAVIGATION -->
 
         <!-- HERO SECTION -->
@@ -61,50 +66,62 @@
 
         <!-- SPOTIFY PLAYER -->
         <div id="spotify__wrapper">
-            <h3 id="music">Listen</h3>
-            <iframe id="spotify" src="https://open.spotify.com/embed/artist/2ClZbDT6lQ8FujFhWtOtPH" frameborder="0"
-                allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="content__wrapper">
+                <h3 id="music">Listen</h3>
+                <iframe id="spotify" src="https://open.spotify.com/embed/artist/2ClZbDT6lQ8FujFhWtOtPH" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
         </div>
 
         <!-- SONGKICK TOUR -->
         <div id="songkick__wrapper">
-            <h3 id="tour">Tour</h3>
-            <a href="https://www.songkick.com/artists/9512259" class="songkick-widget" data-theme="light"
-                data-detect-style="true" data-font-color="#000000" data-background-color="transparent"
-                data-locale="en">Lindsey Wall Tour Dates</a>
-            <script src="//widget.songkick.com/9512259/widget.js"></script>
+            <div class="content__wrapper">
+                <h3 id="tour">Tour</h3>
+                <a href="https://www.songkick.com/artists/9512259" class="songkick-widget" data-theme="light"
+                    data-detect-style="true" data-font-color="#000000" data-background-color="transparent"
+                    data-locale="en">Lindsey Wall Tour Dates</a>
+                <script src="//widget.songkick.com/9512259/widget.js"></script>
+            </div>
         </div>
 
         <!-- VIDEOS SECTION -->
         <div id="videos__wrapper">
-            <h3 id="videos">Videos</h3>
-            <iframe class="video" src="https://www.youtube.com/embed/-PSb9dnbr00" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
+            <div class="content__wrapper">
 
-        <!-- CONTACT SECTION -->
-        <h3 id="contact">Contact</h3>
-
-        <div class="card__wrapper" id="contact__card">
-            <p class="contact__email">
-                <a id="email__link" class="contact__email" href="mailto:lindseywallmusic@gmail.com">
-                    Lindsey is currently accepting new bookings.
-            </p>
-
-            <div class="contact__icons--wrapper">
-                <a href="#spotify">
-                    <img src="./img/spotify_icon.png">
-                </a>
-                <a href="#instagram">
-                    <img src="./img/instagram_icon.png">
-                </a>
-                <a href="#facebook">
-                    <img id="facebook" src="./img/facebook_icon.png">
-                </a>
+                <h3 id="videos">Videos</h3>
+                <iframe class="video" src="https://www.youtube.com/embed/-PSb9dnbr00" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
-        </div>
+
+            <!-- CONTACT SECTION -->
+            <div class="content__wrapper">
+
+                <h3 id="contact">Contact</h3>
+
+                <div class="card__wrapper" id="contact__card">
+                    <p class="contact__email">
+                        <a id="email__link" class="contact__email" href="mailto:lindseywallmusic@gmail.com">
+                            Lindsey is currently accepting new bookings.
+                    </p>
+
+                    <div class="contact__icons--wrapper">
+                        <a href="#spotify">
+                            <img src="./img/spotify_icon.png">
+                        </a>
+                        <a href="#instagram">
+                            <img src="./img/instagram_icon.png">
+                        </a>
+                        <a href="#facebook">
+                            <img id="facebook" src="./img/facebook_icon.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
     </main>
+    <aside id="nav__modal" class="closed"></aside>
+
 </body>
 
 </html>

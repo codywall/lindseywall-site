@@ -119,6 +119,10 @@ body:not(.user-is-tabbing) textarea:focus {
 /* ----------------------- */
 /* NAVIGATION */
 /* ----------------------- */
+.desktop__list {
+  display: none;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -238,22 +242,22 @@ nav #close__button {
   border: none;
 }
 
-nav #nav__modal {
+#nav__modal {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vw;
-  width: 100vh;
+  height: 100vh;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
-nav .closed {
+.closed {
   display: none;
 }
 
-nav .open {
+.open {
   display: block;
 }
 
@@ -281,11 +285,12 @@ nav .open {
 #hero__wrapper #hero {
   width: 90vw;
   height: auto;
+  padding-top: 0;
 }
 
 #hero__wrapper #hero__announcement {
   font-size: 1.5em;
-  padding: 0 1vw;
+  padding: 0 3vw;
   font-family: "Montserrat", Helvetica, sans-serif;
 }
 
@@ -302,7 +307,7 @@ nav .open {
 
 #spotify__wrapper #spotify {
   width: 90vw;
-  height: 250px;
+  height: 185px;
   margin: 0 auto;
 }
 
@@ -405,33 +410,15 @@ nav .open {
 /* ----------------------- */
 /* MEDIA QUERIES */
 /* ----------------------- */
-@media all and (max-width: 1000px) {
-  .hero__text-wrapper {
-    width: 85vw;
-  }
-}
-
 @media all and (min-width: 700px) {
-  .hero__image {
-    background-position: top;
-    max-width: 800px;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+  #spotify__wrapper #spotify {
+    width: 600px;
   }
-  .hero__text-wrapper {
-    max-width: 45vw;
+  .content__wrapper {
+    width: 700px;
+    margin: 0 auto;
   }
-  nav .nav__item--logo img {
-    max-width: 25vw;
-  }
-  nav .nav__item--logo img .toggle {
-    display: none;
-  }
-  nav .nav__item--logo img .nav__item:first-child {
-    margin: auto;
-    padding: 14px 0;
-  }
-  #spotify {
+  #contact__card {
     width: 600px;
   }
   #hero__wrapper {
@@ -448,42 +435,45 @@ nav .open {
     width: 600px;
     height: auto;
   }
-  .about {
+  .video {
+    width: 700px;
+    height: 450px;
+  }
+  #songkick__wrapper div {
+    width: 800px;
+  }
+  #spotify {
+    width: 800px;
+  }
+}
+
+@media all and (min-width: 900px) {
+  #menu-toggle {
+    display: none;
+  }
+  .desktop__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 25vh;
+    list-style-type: none;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .about__image--cropper {
-    width: 65vw;
-    height: 65vw;
+  .desktop__list .desktop__link {
+    list-style-type: none;
+    font-family: "Montserrat", Futura, sans-serif;
+    font-weight: 100;
+    color: #8b0000;
+    font-size: 1.3em;
+    padding: 0 1em;
   }
-  .bio__image {
-    width: 65%;
-    margin: 4vw 2vw 2vw 2vw;
+  .desktop__list .desktop__link:hover {
+    color: darkslategrey;
   }
-  .bio__text {
-    line-height: 2.5em;
-  }
-  .card__wrapper {
-    max-width: 60vw;
-  }
-  .card__header {
-    margin: 20vh auto -.25em 22vw;
-    font-size: 3.75em;
-  }
-  .show__info--wrapper {
-    max-height: 20%;
-  }
-  .show__info {
-    margin: 1vw;
+  .nav__item--logo {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    padding-left: 4vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */
