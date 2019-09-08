@@ -95,13 +95,6 @@ body:not(.user-is-tabbing) textarea:focus {
       align-self: center;
 }
 
-/* Fix the navbar covering the anchor header */
-:target {
-  display: block;
-  position: relative;
-  padding-top: 100px;
-}
-
 /* ----------------------- */
 /* NAVIGATION */
 /* ----------------------- */
@@ -127,6 +120,8 @@ nav {
   width: 100vw;
   z-index: 1;
   margin: 0;
+  -webkit-transition: top 0.4s;
+  transition: top 0.4s;
 }
 
 nav .nav__item--logo img {
@@ -398,7 +393,7 @@ nav #close__button {
 /* ----------------------- */
 @media all and (min-width: 700px) {
   #spotify__wrapper #spotify {
-    width: 600px;
+    width: 700px;
   }
   .content__wrapper {
     width: 700px;
@@ -425,10 +420,7 @@ nav #close__button {
     height: 450px;
   }
   #songkick__wrapper div {
-    width: 800px;
-  }
-  #spotify {
-    width: 800px;
+    width: 700px;
   }
 }
 

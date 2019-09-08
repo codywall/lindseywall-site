@@ -19,12 +19,6 @@ $hero-image: 'img/922DD3A3-E80E-492C-ADF4-FE48F83AA839.png';
     // align-items: center;
 }
 
-@mixin target-offset {
-    display: block;
-    position: relative;
-    padding-top: 100px; 
-}
-
 /* ----------------------- */
     /* SITE-WIDE */
 /* ----------------------- */
@@ -110,11 +104,6 @@ body:not(.user-is-tabbing) textarea:focus {
     // box-shadow: 3px 3px 6px rgba(0, 0, 0, .16);
 }
 
-/* Fix the navbar covering the anchor header */
-:target {
-    @include target-offset();
-  }
-
 /* ----------------------- */
     /* NAVIGATION */
 /* ----------------------- */
@@ -135,6 +124,7 @@ nav {
         width: 100vw;
         z-index: 1;
         margin: 0;
+        transition: top 0.4s;
     
     .nav__item--logo img {  
         width: auto;
@@ -367,7 +357,7 @@ nav {
 #spotify__wrapper {
 
     #spotify {
-        width: 600px;
+        width: 700px;
     }
 }
 
@@ -398,12 +388,9 @@ nav {
 }
 
 #songkick__wrapper div{
-    width: 800px;
+    width: 700px;
 }
 
-#spotify {
-    width: 800px;
-}
 
 }
 
