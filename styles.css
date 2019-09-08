@@ -18,10 +18,10 @@ body {
 }
 
 .body-wrapper {
-  background-image: url("./img/flowers-bg.png");
+  background-color: white;
   background-repeat: repeat;
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100vw;
   background-size: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,16 +32,30 @@ body {
           flex-direction: column;
 }
 
+p {
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: "Montserrat", Futura, sans-serif;
+  font-weight: 200;
+}
+
+h2 {
+  font-family: "Montserrat", Futura, sans-serif;
+  font-weight: 100;
+}
+
 h3 {
-  font-family: "Bebas Kai", Futura, sans-serif;
-  color: #EEC8D8;
+  font-family: "Montserrat", Futura, sans-serif;
+  color: #8b0000;
   font-size: 2em;
   font-weight: 200;
-  margin: 16px 0;
+  margin: 5vw 20px;
   text-align: left;
 }
 
@@ -52,16 +66,14 @@ body:not(.user-is-tabbing) textarea:focus {
   outline: none;
 }
 
-/* Fix the navbar covering the anchor header */
-:target {
-  display: block;
-  position: relative;
-  padding-top: 100px;
-}
-
+/* ----------------------- */
+/* CARDS */
+/* ----------------------- */
 .card__wrapper {
-  background-color: #c199ba;
+  background-color: #8b0000;
+  color: white;
   margin: 0 auto 4vh auto;
+  text-decoration: none;
   padding-top: 0;
   width: 95vw;
   display: -webkit-box;
@@ -70,8 +82,6 @@ body:not(.user-is-tabbing) textarea:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -84,7 +94,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
 .card__header {
   margin: 20vh auto -.25em 10vw;
-  font-family: "Bebas Kai", Futura, sans-serif;
+  font-family: "Montserrat", Futura, sans-serif;
   color: #4B4A4A;
   font-size: 2.75em;
   font-weight: 300;
@@ -92,6 +102,13 @@ body:not(.user-is-tabbing) textarea:focus {
   padding: 0;
   -ms-flex-item-align: baseline;
       align-self: baseline;
+}
+
+/* Fix the navbar covering the anchor header */
+:target {
+  display: block;
+  position: relative;
+  padding-top: 100px;
 }
 
 /* ----------------------- */
@@ -107,26 +124,24 @@ nav {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 0;
-  height: 12vh;
+  height: 90px;
   list-style-type: none;
-  background-color: #FAF9CC;
+  background-color: white;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 1;
   margin: 0;
-  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 nav .nav__item--logo img {
-  max-width: 40vw;
-  height: auto;
+  width: auto;
+  height: 40px;
 }
 
 nav .nav__link {
-  font-family: "Bebas Kai", Futura, sans-serif, sans-serif;
-  color: #EEC8D8;
+  font-family: "Montserrat", Futura, sans-serif, sans-serif;
+  color: #8b0000;
   margin: 10px;
   display: inline-block;
   padding: 1vw 2vw;
@@ -159,16 +174,16 @@ nav #menu-toggle .line--last {
 nav .mobile-nav {
   -webkit-transition: left 0.5s ease;
   transition: left 0.5s ease;
-  background: #4C4469;
+  background: #8b0000;
   color: #f7f7f7;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   height: 100vh;
   left: -100vw;
   padding: 6rem 2rem 2rem 2rem;
   position: fixed;
   top: 0;
-  width: 60vw;
+  width: 300px;
   z-index: 99;
 }
 
@@ -180,7 +195,7 @@ nav .nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "Bebas Kai", Futura, sans-serif;
+  font-family: "Montserrat", Futura, sans-serif;
 }
 
 nav .nav__link {
@@ -205,8 +220,10 @@ nav #close__button--wrapper {
   position: absolute;
   left: 1em;
   top: 1em;
-  width: 5vw;
-  height: 5vw;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  z-index: 200;
 }
 
 nav #close__button {
@@ -235,151 +252,124 @@ nav .open {
   display: block;
 }
 
+nav .sticky {
+  position: fixed;
+  top: 0;
+  z-index: 150;
+}
+
 /* ----------------------- */
 /* HERO SECTION */
 /* ----------------------- */
-.hero__image {
-  background-image: url("../img/hero-bg.jpg");
-  height: 88vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  margin-top: 12vh;
-}
-
-.hero__image .hero__text-wrapper {
+#hero__wrapper {
+  max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: left;
-  position: absolute;
-  width: 75vw;
+  margin: 90px 40px 40px 40px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hero__wrapper #hero {
+  width: 90vw;
   height: auto;
-  top: 65%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #f7f7f7;
-  background-color: rgba(0, 0, 0, 0.51);
-  border-radius: 1px;
-  padding: 1vw 5vw 5vw 5vw;
 }
 
-.hero__image .hero__text-wrapper .hero__text--body {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  font-weight: lighter;
-  font-size: 1em;
-  font-weight: 100;
-  line-height: 1.95;
+#hero__wrapper #hero__text--wrapper {
+  width: auto;
+  margin: 30px;
+  background-color: white;
+  z-index: 100;
+  position: relative;
+  top: -80px;
+  padding: 5px 20px;
 }
 
-.hero__image .hero__text-wrapper .hero__button--wrapper {
+#hero__wrapper #hero__text--wrapper #hero__headline {
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0;
+}
+
+#hero__wrapper #hero__text--wrapper .hero__caption {
+  width: 190px;
+}
+
+#hero__wrapper #hero__text--wrapper #hero__info {
+  font-size: 2.2em;
+  line-height: 2em;
+  background-color: white;
+}
+
+#spotify__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
 }
 
-.hero__image .hero__text-wrapper .hero__button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  position: relative;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: none;
-  border-radius: 2px;
-  padding: 0 1em;
-  max-width: 44vw;
-  margin: 1vw;
-  height: 36px;
-  vertical-align: middle;
-  text-align: center;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  color: #4B4A4A;
-  background-color: #EEC8D8;
-  outline: none;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  font-family: "Bebas Kai", Futura, sans-serif;
-  font-size: 1.2em;
-  font-weight: 500;
-  line-height: 36px;
-  overflow: hidden;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  transition: -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+#spotify__wrapper #spotify {
+  width: 90vw;
+  height: 250px;
+  margin: 0 auto;
+}
+
+#songkick__wrapper {
+  font-family: "Montserrat", Futura, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
+}
+
+#songkick__wrapper .songkick-widget {
+  margin: 0 auto;
+  width: 90vw;
 }
 
 /* ----------------------- */
 /* BIO PAGE */
 /* ----------------------- */
-.bio__image {
-  width: 90%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 4vw 2vw;
-}
-
-.bio__text {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  color: #f7f7f7;
-  font-weight: 200;
-  line-height: 1.55em;
-  padding: 0 6vw 4vw 6vw;
-}
-
 /* ----------------------- */
 /* VIDEOS PAGE */
 /* ----------------------- */
-.video__wrapper {
-  position: relative;
-  padding: 3vw 1vw 1vw 1vw;
+#videos__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: auto;
   height: auto;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  margin-bottom: 100px;
 }
 
-.video__wrapper iframe {
-  width: 96%;
-  min-height: 35vh;
+.video {
+  width: 90vw;
+  height: 70vw;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -398,41 +388,14 @@ nav .open {
 /* ----------------------- */
 /* VIDEOS PAGE */
 /* ----------------------- */
-.show__info--wrapper {
-  padding: 4vw;
-}
-
-.show__info {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  color: #f7f7f7;
-  line-height: .5em;
-  margin: 3vw;
-  padding: 2vw 0;
-}
-
-.show__info--date {
-  font-size: 1.25em;
-  font-weight: 400;
-}
-
-.show__info--venue {
-  font-size: 1.05em;
-  font-weight: 100;
-}
-
 /* ----------------------- */
 /* CONTACT CARD */
 /* ----------------------- */
-.contact-header {
-  margin: 1vh auto -.25em 10vw;
-  font-family: "Bebas Kai", Futura, sans-serif;
-  color: #4B4A4A;
-  font-size: 2.75em;
-  font-weight: 300;
-  border: none;
-  padding: 0;
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
+#contact__card {
+  background-color: white;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contact__email {
@@ -442,11 +405,26 @@ nav .open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #4B4A4A;
   font-family: "Montserrat", Helvetica, sans-serif;
   font-size: 1.15em;
+  margin: 20px;
+}
+
+.contact__email #email__link {
+  text-decoration: underline;
+  color: #4B4A4A;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 1.15em;
+  margin: 20px 0;
+}
+
+#facebook {
+  margin-top: -15px;
 }
 
 .contact__icons--wrapper {
@@ -456,12 +434,13 @@ nav .open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: 10px 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 /* ----------------------- */
@@ -476,6 +455,9 @@ nav .open {
 @media all and (min-width: 700px) {
   .hero__image {
     background-position: top;
+    max-width: 800px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
   .hero__text-wrapper {
     max-width: 45vw;
@@ -490,6 +472,37 @@ nav .open {
     margin: auto;
     padding: 14px 0;
   }
+  #spotify {
+    width: 600px;
+  }
+  #hero__wrapper {
+    max-width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #hero__wrapper #hero {
+    width: 600px;
+    height: auto;
+  }
+  #hero__wrapper #hero__text--wrapper {
+    width: auto;
+    margin: 30px;
+    background-color: white;
+    z-index: 100;
+  }
+  #hero__wrapper #hero__text--wrapper #hero__headline {
+    font-size: 10em;
+    font-style: italic;
+    font-weight: bold;
+  }
+  #hero__wrapper #hero__text--wrapper #hero__info {
+    font-size: 2.2em;
+    line-height: 2em;
+    background-color: white;
+  }
   .about {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -497,8 +510,6 @@ nav .open {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

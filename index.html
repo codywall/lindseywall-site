@@ -35,41 +35,53 @@
                     <button id=close__button>&#10006;</button>
                 </div>
                 <ul class="nav__list">
-                    <li class="nav__item nav__item_active"><a href="index.html" class="nav__link">HOME</a></li>
-                    <li class="nav__item"><a href=" videos.html" class="nav__link">VIDEOS</a></li>
-                    <li class="nav__item"><a href="shows.html" class="nav__link">SHOWS</a></li>
-                    <li class="nav__item"><a href="bio.html" class="nav__link">BIO</a></li>
-                    <!-- <li class="nav__item"><a href="#" class="nav__link">MUSIC</a></li> -->
+                    <li class="nav__item nav__item_active"><a href="#hero" class="nav__link">HOME</a></li>
+                    <li class="nav__item"><a href="#music" class="nav__link">MUSIC</a></li>
+                    <li class="nav__item"><a href="#tour" class="nav__link">TOUR</a></li>
+                    <li class="nav__item"><a href="#videos" class="nav__link">VIDEOS</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">CONTACT</a></li>
+
+                    <!-- <li class="nav__item"><a href="bio.html" class="nav__link">BIO</a></li> -->
                 </ul>
             </div>
         </nav>
         <aside id="nav__modal" class="closed"></aside>
-
-        <div class="hero__image" id="hero">
-            <div class="hero__text-wrapper">
-                <!-- <h1 class="hero__text--heading">Lindsey Wall</h1> -->
-                <p class="hero__text--body">Hi! My name is Lindsey Wall. I’m a flower child that grew up in beautiful
-                    Santa
-                    Cruz, California. I pour my heart and soul into music through songwriting and guitar. I hope you
-                    enjoy
-                    my music!</p>
-                <div class="hero__button--wrapper">
-                    <button class="hero__button" onclick="window.location.href = 'videos.html'">Listen
-                        Now</button>
-                    <button class="hero__button" onclick="window.location.href = 'shows.html'">Live Shows
-                    </button>
-                </div>
+        <div id="hero__wrapper">
+            <img src="img/hero-bg.jpg" alt="" id="hero">
+            <div id="hero__body--wrapper">
+                <p id="hero__body">Lindsey is a singer songwriter based out of California.</p>
             </div>
+
+        </div>
+        </div>
+        <div id="spotify__wrapper">
+            <h3 id="music">Listen</h3>
+            <iframe id="spotify" src="https://open.spotify.com/embed/playlist/4dTYiq1DFfsbEYF0F9mCqF" frameborder="0"
+                allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
 
+        <div id="songkick__wrapper">
+            <h3 id="tour">Tour</h3>
+            <a href="https://www.songkick.com/artists/9512259" class="songkick-widget" data-theme="light"
+                data-detect-style="true" data-font-color="#000000" data-background-color="transparent"
+                data-locale="en">Lindsey Wall Tour Dates</a>
+            <script src="//widget.songkick.com/9512259/widget.js"></script>
+        </div>
 
+        <div id="videos__wrapper">
+            <h3 id="videos">Videos</h3>
+            <iframe class="video" src="https://www.youtube.com/embed/-PSb9dnbr00" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
         <!-- CONTACT SECTION -->
-        <h2 class="contact__header">Contact</h2>
+        <h3 id="contact">Contact</h3>
 
-        <div class="card__wrapper">
-            <a href="#email">
-                <h2 class="contact__email">booking@lindseywallmusic.com</h2>
-            </a>
+        <div class="card__wrapper" id="contact__card">
+            <p class="contact__email"> Lindsey is currently accepting new bookings.
+                <a id="email__link" class="contact__email" href="mailto:lindseywallmusic@gmail.com">Send us an email</a>
+            </p>
+
             <div class="contact__icons--wrapper">
                 <a href="#spotify">
                     <img src="./img/spotify_icon.png">
@@ -78,7 +90,7 @@
                     <img src="./img/instagram_icon.png">
                 </a>
                 <a href="#facebook">
-                    <img src="./img/facebook_icon.png">
+                    <img id="facebook" src="./img/facebook_icon.png">
                 </a>
             </div>
         </div>

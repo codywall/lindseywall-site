@@ -44,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (position <= -total * 0.5) closeNav();;
     }
 
-    mobileNav.addEventListener('touchstart', handleTouch, false)
-    mobileNav.addEventListener('touchmove', handleTouch, false)
-    mobileNav.addEventListener('touchend', handleTouchEnd, false)
-    document.getElementById('nav_modal').addEventListener('click', closeNav, false);
+    // mobileNav.addEventListener('touchstart', handleTouch, false)
+    // mobileNav.addEventListener('touchmove', handleTouch, false)
+    // mobileNav.addEventListener('touchend', handleTouchEnd, false)
+    // document.getElementById('nav_modal').addEventListener('click', closeNav, false);
 
 
-    //check to see if user is using keyboard navigation before removing blue focus outline
+    //check to see if user is using keyboard navigation before removing blue focus outline (accessibility)
     function handleFirstTab(e) {
         if (e.keyCode === 9) { // the "I am a keyboard user" key
             document.body.classList.add('user-is-tabbing');
