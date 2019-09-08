@@ -7,7 +7,7 @@ $primary-color: #4B4A4A;
 $secondary-color: #8b0000;
 $card-color: #C199BA; 
 $accent-color:  #FFFAF1;
-$white-color: #f7f7f7;
+$white-color: white;
 $primary-font: 'Montserrat', Futura, sans-serif;
 $body-font: 'Montserrat', Helvetica, sans-serif;
 $hero-image: 'img/922DD3A3-E80E-492C-ADF4-FE48F83AA839.png';
@@ -57,6 +57,7 @@ p {
 
 a   {
     text-decoration: none;
+    color: $secondary-color;
 }
 
 h1 {
@@ -75,7 +76,7 @@ h3 {
     color: $secondary-color;
     font-size: 2em;
     font-weight: 200;
-    margin: 5vw;
+    margin: 5vw 0 20px 5vw;
     text-align: left;
 }
 
@@ -259,60 +260,28 @@ nav {
     .open {
         display: block;
     }
-
-    .sticky {
-        position: fixed;
-        top: 0;
-        z-index: 150;
-
-      }
-    //   .sticky + main {
-    //     padding-top: 60px;
-    //   }
 }
 
 /* ----------------------- */
     /* HERO SECTION */
 /* ----------------------- */
 #hero__wrapper {
-    max-width: 100vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
-    margin: 90px 40px 40px 40px;
+    margin: 90px auto 40px auto;
     justify-content: space-around;
     align-items: center;
+    background-color: $white-color;
 
     #hero {
         width: 90vw;
         height: auto;
     }   
-
-    #hero__text--wrapper {
-        width: auto;
-        margin: 30px;
-        background-color: white;
-        z-index: 100;
-        position: relative;
-        top: -80px;
-        padding: 5px 20px;
-
-        #hero__headline {
-            font-size: 2.5em;
-            font-style: italic;
-            font-weight: bold;
-            margin: 0;
-            // font-family: futura, helvetica, sans-serif;
-        }
-
-        .hero__caption {
-            width: 190px;
-        }
-
-        #hero__info {
-            font-size: 2.2em;
-            line-height: 2em;
-            background-color: white;
-        }
+    #hero__announcement {
+        font-size: 1.5em;
+        padding: 0 1vw;
+        font-family: $body-font;
     }
 }
 
@@ -334,32 +303,13 @@ nav {
     font-family: $primary-font;
     display: flex;
     flex-direction: column;
-    margin: 0 0 30px 0;
+    margin-bottom: 30px;
 }
 
 #songkick__wrapper div {
     width: 90vw;
     align-self: center;
 }
-
-/* ----------------------- */
-        /* BIO PAGE */
-/* ----------------------- */
-
-    // .bio__image {
-    //     width: 90%;
-    //     align-self: center;
-    //     margin: 4vw 2vw;
-    // }
-
-    // .bio__text {
-    //     font-family: $body-font;
-    //     color: $white-color;
-    //     font-weight: 200;
-    //     line-height: 1.55em;
-    //     padding: 0 6vw 4vw 6vw;
-    // }
-
 
 /* ----------------------- */
        /* VIDEOS PAGE */
@@ -371,7 +321,7 @@ nav {
     height: auto;
     overflow: auto; 
     -webkit-overflow-scrolling:touch;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 } 
 .video {
     width: 90vw;
@@ -388,49 +338,17 @@ nav {
 }
 
 /* ----------------------- */
-       /* VIDEOS PAGE */
-/* ----------------------- */
-// .show__info--wrapper {
-//     padding: 4vw;
-// }
-
-// .show__info {
-//     font-family: $body-font;
-//     color: $white-color;
-//     line-height: .5em;
-//     margin: 3vw;
-//     padding: 2vw 0;
-// }
-
-// .show__info--date {
-//     font-size: 1.25em;
-//     font-weight: 400;
-// }
-
-// .show__info--venue {
-//     font-size: 1.05em;
-//     font-weight: 100;
-// }
-
-/* ----------------------- */
     /* CONTACT CARD */
 /* ----------------------- */
 #contact__card {
-    background-color: $accent-color;
+    background-color: $white-color;
     padding: 20px;
     box-sizing: border-box;
-}
-.contact__email {
-    @include flex-center();
-    flex-direction: column;
-    color: $primary-color;
-    font-family: $body-font;
-    font-size: 1.15em;
-    margin: 20px;
+    width: 90vw;
 
     #email__link {
             text-decoration: underline;
-            color: $primary-color;
+            color: $secondary-color;
             font-family: $body-font;
             font-size: 1.15em;
             margin: 20px 0;
@@ -492,41 +410,17 @@ nav .nav__item--logo img {
     width: 600px;
 }
 
-#main div {
-    background-color: white;
-}
-
 #hero__wrapper {
-    max-width: 100vw;
     display: flex;
-    // margin: 150px 40px 40px 40px;
+    width: 600px;
+    margin: 70px auto 30px auto;
     justify-content: space-around;
+    background-color: $white-color;
 
     #hero {
         width: 600px;
         height: auto;
-
     }   
-
-    #hero__text--wrapper {
-        width: auto;
-        margin: 30px;
-        background-color: white;
-        z-index: 100;
-
-        #hero__headline {
-            font-size: 10em;
-            font-style: italic;
-            font-weight: bold;
-            // font-family: futura, helvetica, sans-serif;
-        }
-
-        #hero__info {
-            font-size: 2.2em;
-            line-height: 2em;
-            background-color: white;
-        }
-    }
 }
 
 .about {

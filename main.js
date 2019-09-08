@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById("menu-toggle");
     const topNav = document.getElementById("mobile-nav");
     const closeButton = document.getElementById("close__button");
-    const mobileNav = document.getElementById("#mobile-nav");
+    const mobileNav = document.getElementById("mobile-nav");
     const navModal = document.getElementById("nav__modal");
+    const menuItems = document.getElementsByClassName("nav__link");
 
     function toggleModal() {
         if (navModal.className === "open")
@@ -13,20 +14,18 @@ document.addEventListener('DOMContentLoaded', function () {
             navModal.className = "open";
     }
 
+    function closeNav() {
+        topNav.classList.toggle("active");
+        toggleModal();
+    }
+
     //added event listeners to buttons
-    toggleButton.addEventListener('click', function () {
-        console.log("toggle clicked");
-        topNav.classList.toggle("active");
-        toggleModal();
-    }, false);
+    toggleButton.addEventListener('click', closeNav);
+    closeButton.addEventListener('click', closeNav);
 
-    closeButton.addEventListener('click', function closeNav() {
-        console.log("toggle clicked");
-        topNav.classList.toggle("active");
-        toggleModal();
-
-    }, false);
-
+    for (var i = 0, len = menuItems.length; i < len; i++) {
+        menuItems[i].addEventListener('click', closeNav);
+    }
 
     function handleTouch(e) {
         var x = e.changedTouches[0].clientX;
@@ -41,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
         var total = this.clientWidth;
         var position = x - total;
         this.style.left = "";
-        if (position <= -total * 0.5) closeNav();;
+        if (position <= -total * 0.5) { closeNav(); }
     }
 
-    // mobileNav.addEventListener('touchstart', handleTouch, false)
-    // mobileNav.addEventListener('touchmove', handleTouch, false)
-    // mobileNav.addEventListener('touchend', handleTouchEnd, false)
-    // document.getElementById('nav_modal').addEventListener('click', closeNav, false);
+    mobileNav.addEventListener('touchstart', handleTouch, false)
+    mobileNav.addEventListener('touchmove', handleTouch, false)
+    mobileNav.addEventListener('touchend', handleTouchEnd, false)
+    document.getElementById('nav__modal').addEventListener('click', closeNav, false);
 
 
     //check to see if user is using keyboard navigation before removing blue focus outline (accessibility)
