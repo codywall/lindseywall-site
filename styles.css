@@ -70,6 +70,10 @@ body:not(.user-is-tabbing) textarea:focus {
 /* ----------------------- */
 /* CARDS */
 /* ----------------------- */
+.content__wrapper {
+  margin: 0 auto;
+}
+
 .card__wrapper {
   background-color: #8b0000;
   color: #FFFAF1;
@@ -89,24 +93,6 @@ body:not(.user-is-tabbing) textarea:focus {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
-}
-
-.card__header {
-  margin: 20vh auto -.25em 10vw;
-  font-family: "Montserrat", Futura, sans-serif;
-  color: #4B4A4A;
-  font-size: 2.75em;
-  font-weight: 300;
-  border: none;
-  padding: 0;
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
-}
-
-.flower__line {
-  width: 50vw;
-  height: auto;
-  margin: 0 auto;
 }
 
 /* Fix the navbar covering the anchor header */
@@ -416,7 +402,6 @@ nav #close__button {
   }
   .content__wrapper {
     width: 700px;
-    margin: 0 auto;
   }
   #contact__card {
     width: 600px;
