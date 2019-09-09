@@ -40,10 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (prevScrollpos > currentScrollPos) {
             document.getElementById("nav").style.top = "0";
         } else {
-            document.getElementById("nav").style.top = "-100vw";
+            document.getElementById("nav").style.top = "-40vw";
         }
         prevScrollpos = currentScrollPos;
     }
+
 
 }, false);
 

@@ -75,6 +75,12 @@ h3 {
     text-align: left;
 }
 
+hr {
+    width: 90vw;
+    color: $secondary-color;
+    margin-top: 100px;
+}
+
 //hide blue focus outline except for accessible users
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,
@@ -124,7 +130,7 @@ nav {
         width: 100vw;
         z-index: 1;
         margin: 0;
-        transition: top 0.4s;
+        transition: top 0.3s;
     
     .nav__item--logo img {  
         width: auto;
@@ -326,13 +332,16 @@ nav {
     padding: 20px;
     box-sizing: border-box;
     width: 90vw;
+    display: flex;
 
-    #email__link {
+    .contact__email {
             text-decoration: underline;
             color: $secondary-color;
             font-family: $body-font;
             font-size: 1.15em;
-            margin: 20px 0;
+            margin: 18px 0;
+            justify-self: center;
+            text-align: center;
     }
 }
 
